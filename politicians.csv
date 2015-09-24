@@ -1,0 +1,16 @@
+Name,Party,Draw,Hold,Strat,PD,Money,Special,VP,Picture,Value est
+Bill Clinton,D,5,2,15,5,0,,,bill_clinton,15
+Dan Quayle ,R,7,3,0,2,3,,,dan_quayle,12.6
+Al Gore,D,4,2,5,2,1,1:gs: for :young:,,al_gore,9.2
+George W Bush,R,5,2,10,2,0,,,w_bush,11
+Dick Cheny,R,3,2,15,4,0,1:gs: for :hawks:,,dick_cheny,12
+Barack Obama,D,5,2,10,1,0,2:gs: for :black:,,barack_obama,10
+Joe Biden,D,4,1,5,2,0,May move one space during cleanup phase,,joe_biden,8
+Mitt Romney,R,4,2,10,2,5,,,mitt_romney,11
+Paul Ryan,R,5,2,10,1,2,2:gs: for :libertarian:,,paul_ryan,10.4
+Sarah Palin,R,5,0,0,1,0,,,sarah_palin,6
+Hillary Clinton,D,4,4,15,2,0,2:gs: for :women:,,hillary_clinton,13
+Bernie Sanders,D,6,3,5,0,0,2:gs: for :young:,,bernie_sanders,10
+Donald Trump,R,7,1,0,0,20,,,donald_trump,12
+Jeb Bush,R,3,2,15,3,0,,,jeb_bush,11
+George HW Bush,R,4,3,10,2,0,,,hw_bush,11
