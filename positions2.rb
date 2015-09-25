@@ -4,15 +4,15 @@ Squib::Deck.new(layout: 'hand_custom.yml', cards: 46) do
   background color: :white
    
 #  text str:"cut", layout: :cut, hint: :blue
- # text str:"safe", layout: :safe, hint: :red
+#  text str:"safe", layout: :safe, hint: :red
 
 
   data = csv file: "positions.csv"
 
 
-  text(str: data['Name'],layout: :title, wrap: :word_char, ellipsize: false , align: "right" , hint: :red) 
-  text(str: data['Subject'], layout: :type, wrap: :word_char, ellipsize: false, align: "right", color: "#aaaaaa", hint: :blue)
-  text(str: data['Flavor'], layout: :art, wrap: :word_char, ellipsize: false, align: "right", font: 'Arial italic 24', hint: :red)
+  text(str: data['Name'],layout: :title, wrap: :word_char, ellipsize: false , align: "right" ) 
+  text(str: data['Subject'], layout: :type, wrap: :word_char, ellipsize: false, align: "right", color: "#aaaaaa")
+  text(str: data['Flavor'], layout: :art, wrap: :word_char, ellipsize: false, align: "right", font: 'Arial italic 24')
 
   text(str: data['Special Effect'], layout: :description, align: "right") do |embed|
      embed.svg key: ':$:', file: 'img/money.svg', width:128, height:128
@@ -49,23 +49,16 @@ Squib::Deck.new(layout: 'hand_custom.yml', cards: 46) do
 
 
   #GOP pd points for playing this card 
-  circle layout: :b1outer, fill_color: '#ff6666', stroke_color: '#0000'
-  svg  file: 'img/gop.svg', layout: :b1gopsvg
-  circle layout: :b1inner, fill_color: '#ff0000', stroke_color: '#0000'
-  circle layout: :b1pdcirc, fill_color: '#ff0000', stroke_color: '#0000'
-
-#  rect layout: :bonus1, radius: 25, fill_color: :red  #pd for gop's
-#  svg  file: 'img/gop_red.svg', layout: :bonus1, hint: :red
-  text str: data['RepPD'],layout: :b1num,
-       font: 'Arial 46', align: :center, color: :white
-  svg  file: 'img/pd2_white.svg', layout: :b1pdsvg
+  svg  file: 'img/gop_red.svg', layout: :b1_up_rt
+  svg  file: 'img/pd2.svg', layout: :b1_dn_rt
+  text str: data['RepPD'],layout: :bonus1,
+       font: 'Arial 100', align: :left, color: :red
 
   #Dem pd points for playing this card
-  circle layout: :b2outer, fill_color: '#6666ff', stroke_color: '#0000'
-  svg  file: 'img/dem.svg', layout: :bonus2
-  circle layout: :b2inner, fill_color: '#0000ff', stroke_color: '#0000'
-  text str: data['DemPD'], layout: :b2num ,
-       font: 'Arial 46', align: :center, color: :white
+  svg  file: 'img/dem_blue.svg', layout: :b2_up_rt
+  svg  file: 'img/pd2.svg', layout: :b2_dn_rt
+  text str: data['DemPD'], layout: :bonus2,
+       font: 'Arial 90', align: :left, color: :blue
 
 
 
