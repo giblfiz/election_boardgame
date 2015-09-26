@@ -6,7 +6,7 @@ def wrap(s, width=78)
 end
 
 
-Squib::Deck.new(width: 825, height: 1125, cards: 15) do
+Squib::Deck.new(layout: 'fantasy_custom.yml', cards: 15) do
   background color: :black
   data = csv file: "politicians.csv"
 
@@ -20,32 +20,35 @@ Squib::Deck.new(width: 825, height: 1125, cards: 15) do
   rect x: 38, y: 38, width: 750, height: 1050, radius: 38, fill_color: data["Party_color"] # card border
 
 
-  text(str: data['Name'], x: 38, y: 48, width: 750,  font: 'Arial 54', align: 'center',wrap: :word_char, ellipsize: false, color: :white)
+  text(str: data['Name'],layout: :title,  font: 'Arial 34', align: 'left',wrap: :word_char, ellipsize: false, color: :white, hint: :green)
 
-  svg  file: 'img/hand_white.svg', x: (825-75-128),y: (1125-75-128-25-128-50), width: 128, height: 128
-  text(str: data["Hold"], x: (825-75-128-128),y: (1125-75-128-25-128-50),  font: 'Arial 90', align: 'center', color: :white)
-  text(str: "Hand Limit", x: (825-75-128-128), y: (1125-75-128-50-24),  font: 'Arial 24', align: 'center', color: :white)
+  text str: data["Hold"], layout: :descR1C1, font: 'Arial 60', align: 'right', color: :white
+  svg  file: 'img/hand_white.svg', layout: :descR1C2
+#  text(str: "Hand Limit", x: (825-75-128-128), y: (1125-75-128-50-24),  font: 'Arial 24', align: 'center', color: :white)
 
+  text(str: data["Draw"], layout: :descR1C4,  font: 'Arial 60', align: 'right', color: :white)
+  svg  file: 'img/draw_white.svg', layout: :descR1C5
+#  text(str: "Draw", x: (75), y: (1125-75-128-50-24),  font: 'Arial 24', align: 'center', color: :white)
 
-  svg  file: 'img/draw_white.svg', x: (75+128),y: (1125-75-128-25-128-50), width: 128, height: 128
-  text(str: data["Draw"], x: (75),y: (1125-75-128-25-128-50),  font: 'Arial 90', align: 'center', color: :white)
-  text(str: "Draw", x: (75), y: (1125-75-128-50-24),  font: 'Arial 24', align: 'center', color: :white)
-
-  svg  file: 'img/strategy_white.svg', x: (825-75-128),y: (1125-75-128-25-128-50+192), width: 128, height: 128
-  text(str: data["Strat"], x: (825-75-128-128),y: (1125-75-128-25-128-50+192),  font: 'Arial 90', align: 'center', color: :white)
-  text(str: "Strategy", x: (825-75-128-128), y: (1125-75-128-50-24+192),  font: 'Arial 24', align: 'center', color: :white)
-
-
-  svg  file: 'img/pd2_white.svg', x: (75+128),y: (1125-75-128-25-128-50+192), width: 128, height: 128
-  text(str: data["PD"], x: (75),y: (1125-75-128-25-128-50+192),  font: 'Arial 90', align: 'center', color: :white)
-  text(str: "Political Dicipline", x: (75), y: (1125-75-128-50-24+192),  font: 'Arial 24', align: 'center', color: :white)
+  text(str: data["Strat"], layout: :descR1C7special,  font: 'Arial 60', align: 'center', color: :white)
+  svg  file: 'img/strategy_white.svg', layout: :descR1C8
+#  text(str: "Strategy", x: (825-75-128-128), y: (1125-75-128-50-24+192),  font: 'Arial 24', align: 'center', color: :white)
 
 
+  text(str: data["PD"], layout: :descR2C1,  font: 'Arial 60', align: 'right', color: :white)
+  svg  file: 'img/pd2_white.svg', layout: :descR2C2
+
+  text(str: data["PD"], layout: :descR3C1,  font: 'Arial 60', align: 'right', color: :white)
+  svg  file: 'img/pd2_white.svg', layout: :descR3C2
+
+
+#  text(str: "Political Dicipline", x: (75), y: (1125-75-128-50-24+192),  font: 'Arial 24', align: 'center', color: :white)
+
+  
 
 data['Picture'].map! {|pname|  'pictures/' + pname.to_s + '.png' }
-# text(str: data['Picture'], x: 38, y: 48, width: 750,  font: 'Arial 34', align: 'center',wrap: :word_char, ellipsize: false)
 
-  png file: data['Picture'], x: 50, y: 230, width: 725, height:475, align: 'center' 
+png file: data['Picture'], layout: :art
 
   save prefix: 'candidates', format: :png
 

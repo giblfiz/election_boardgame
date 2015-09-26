@@ -1,6 +1,6 @@
 #This layout inspired by popular fantasy games
 title:
-  x: 90
+  x: 75
   y: 90
   width: 500
   height: 50
@@ -36,15 +36,157 @@ tr: #alias
   extends: type_right
 
 description:
-  x: 100
+  x: 75
   y: 730
-  width: 625
-  height: 275
+  width: 675
+  height: 320
   valign: middle
   align: center
   font_size: 18
 desc: # alias
   extends: description
+
+#84x84 blocks 8 across, 3 down with gaps
+#vertical offset is 106
+descR1C1:
+  y: 730
+  x: 75
+  width: 84
+  height: 84
+
+#<?php
+#for($r = 0; $r <3; $r++){
+#       for($c =0; $c < 8; $c++){
+# 	      echo "
+#descR" . ($r+1) . "C" . ($c+1) . ":
+#  extends: descR1C1 
+#  x: += ". 84*$c ."
+#  y: += ". 106*$r ."
+#";
+#	}
+#}
+
+descR1C2:
+  extends: descR1C1 
+  x: += 84
+  y: += 0
+
+descR1C3:
+  extends: descR1C1 
+  x: += 168
+  y: += 0
+
+descR1C4:
+  extends: descR1C1 
+  x: += 252
+  y: += 0
+
+descR1C5:
+  extends: descR1C1 
+  x: += 336
+  y: += 0
+
+descR1C6:
+  extends: descR1C1 
+  x: += 420
+  y: += 0
+
+descR1C7:
+  extends: descR1C1 
+  x: += 504
+  y: += 0
+
+descR1C7special:
+  extends: descR1C1 
+  x: += 499
+  width: += 25
+
+
+descR1C8:
+  extends: descR1C1 
+  x: += 588
+  y: += 0
+
+descR2C1:
+  extends: descR1C1 
+  x: += 0
+  y: += 106
+
+descR2C2:
+  extends: descR1C1 
+  x: += 84
+  y: += 106
+
+descR2C3:
+  extends: descR1C1 
+  x: += 168
+  y: += 106
+
+descR2C4:
+  extends: descR1C1 
+  x: += 252
+  y: += 106
+
+descR2C5:
+  extends: descR1C1 
+  x: += 336
+  y: += 106
+
+descR2C6:
+  extends: descR1C1 
+  x: += 420
+  y: += 106
+
+descR2C7:
+  extends: descR1C1 
+  x: += 504
+  y: += 106
+
+descR2C8:
+  extends: descR1C1 
+  x: += 588
+  y: += 106
+
+descR3C1:
+  extends: descR1C1 
+  x: += 0
+  y: += 212
+
+descR3C2:
+  extends: descR1C1 
+  x: += 84
+  y: += 212
+
+descR3C3:
+  extends: descR1C1 
+  x: += 168
+  y: += 212
+
+descR3C4:
+  extends: descR1C1 
+  x: += 252
+  y: += 212
+
+descR3C5:
+  extends: descR1C1 
+  x: += 336
+  y: += 212
+
+descR3C6:
+  extends: descR1C1 
+  x: += 420
+  y: += 212
+
+descR3C7:
+  extends: descR1C1 
+  x: += 504
+  y: += 212
+
+descR3C8:
+  extends: descR1C1 
+  x: += 588
+  y: += 212
+
 
 lower_right:
   x: 675

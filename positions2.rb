@@ -51,14 +51,16 @@ Squib::Deck.new(layout: 'hand_custom.yml', cards: 46) do
   #GOP pd points for playing this card 
   svg  file: 'img/gop_red.svg', layout: :b1_up_rt
   svg  file: 'img/pd2.svg', layout: :b1_dn_rt
-  text str: data['RepPD'],layout: :bonus1,
-       font: 'Arial 100', align: :left, color: :red
+  text str: data['RepPD'],layout: :b1_lft,
+       font: 'Arial 100', align: :right, color: :red, valign: :bottom
+
+#  text str: " ", layout: :bonus1, hint: :red
 
   #Dem pd points for playing this card
   svg  file: 'img/dem_blue.svg', layout: :b2_up_rt
   svg  file: 'img/pd2.svg', layout: :b2_dn_rt
-  text str: data['DemPD'], layout: :bonus2,
-       font: 'Arial 90', align: :left, color: :blue
+  text str: data['DemPD'], layout: :b2_lft,
+       font: 'Arial 90', align: :right, color: :blue, valign: :bottom
 
 
 

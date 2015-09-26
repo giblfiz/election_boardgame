@@ -41,6 +41,12 @@ bonus1:
   width:  175
   height: 175
 
+b1_lft:
+  extends: bonus1
+  width: 125
+  x: -= 30
+
+
 b1_up_rt:
   extends: bonus1
   width: 70
@@ -57,6 +63,12 @@ b1_dn_rt:
 bonus2:
   extends: bonus1
   y: += 198
+
+b2_lft:
+  extends: bonus2
+  width: 125
+  x: -= 30
+
 
 b2_up_rt:
   extends: bonus2
