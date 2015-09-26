@@ -38,8 +38,8 @@ Squib::Deck.new(layout: 'fantasy_custom.yml', cards: 15) do
   text(str: data["PD"], layout: :descR2C1,  font: 'Arial 60', align: 'right', color: :white)
   svg  file: 'img/pd2_white.svg', layout: :descR2C2
 
-  text(str: data["PD"], layout: :descR3C1,  font: 'Arial 60', align: 'right', color: :white)
-  svg  file: 'img/pd2_white.svg', layout: :descR3C2
+  text(str: data["Money"], layout: :descR3C1,  font: 'Arial 60', align: 'right', color: :white)
+  svg  file: 'img/Money_white.svg', layout: :descR3C2
 
 
 #  text(str: "Political Dicipline", x: (75), y: (1125-75-128-50-24+192),  font: 'Arial 24', align: 'center', color: :white)
