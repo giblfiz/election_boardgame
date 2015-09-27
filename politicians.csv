@@ -1,16 +1,16 @@
-Name,Party,Draw,Hold,Strat,PD,Money,Special,VP,Picture,Value est
-Bill Clinton,D,5,2,15,5,0,,,bill_clinton,15
-Dan Quayle ,R,7,3,0,2,3,,,dan_quayle,12.6
-Al Gore,D,4,2,5,2,1,1:gs: for :young:,,al_gore,9.2
-George W Bush,R,5,2,10,2,0,,,w_bush,11
-Dick Cheny,R,3,2,15,4,0,1:gs: for :hawks:,,dick_cheny,12
-Barack Obama,D,5,2,10,1,0,2:gs: for :black:,,barack_obama,10
-Joe Biden,D,4,1,5,2,0,May move one space during cleanup phase,,joe_biden,8
-Mitt Romney,R,4,2,10,2,5,,,mitt_romney,11
-Paul Ryan,R,5,2,10,1,2,2:gs: for :libertarian:,,paul_ryan,10.4
-Sarah Palin,R,5,0,0,1,0,,,sarah_palin,6
-Hillary Clinton,D,4,4,15,2,0,2:gs: for :women:,,hillary_clinton,13
-Bernie Sanders,D,6,3,5,0,0,2:gs: for :young:,,bernie_sanders,10
-Donald Trump,R,7,1,0,0,20,,,donald_trump,12
-Jeb Bush,R,3,2,15,3,0,,,jeb_bush,11
-George HW Bush,R,4,3,10,2,0,,,hw_bush,11
+Name,Party,Draw,Hold,Strat,PD,Money,Special,VP,Picture,Special-estimated-value,Value est
+Bill Clinton,D,3,2,15,5,0,,As VP: Gain 10:strat:,bill_clinton,,13
+Dan Quayle ,R,5,3,0,2,3,,As VP: Gain 2:draw:,dan_quayle,,10.6
+Al Gore,D,2,2,5,2,1,2:gs: for :Young:,As VP: 1:gs: for :Young:,al_gore,192,7.2
+George W Bush,R,3,2,10,2,0,,As VP: Gain 2:pd:,w_bush,,9
+Dick Cheny,R,3,2,15,4,0,2:gs: for :Hawks:,As VP: Gain 1:hand_limit:,dick_cheny,132,12
+Barack Obama,D,5,2,10,1,0,2:gs: for :African:,As VP: Gain 1:gs: for :African:,barack_obama,264,10
+Joe Biden,D,4,1,5,2,0,“Amtrak” Joe may move one space during cleanup phase,,joe_biden,,8
+Mitt Romney,R,4,2,10,2,10,2:gs: for :Christian:,As VP: Gain 1:gs: for :Christian:,mitt_romney,,12
+Paul Ryan,R,5,2,10,1,2,2:gs: for :Libertarian:,As VP: Gain 1:gs: for :Libertarian:,paul_ryan,186,10.4
+Sarah Palin,R,5,0,0,1,0,,As VP: Gain 2:buzz:,sarah_palin,,6
+Hillary Clinton,D,4,3,15,2,0,2:gs: for :Women:,As VP: Gain 1:gs: for :Women:,hillary_clinton,432,12
+Bernie Sanders,D,6,2,5,0,0,2:gs: for :Young:,As VP: Gain 2:draw:,bernie_sanders,192,9
+Donald Trump,R,7,1,0,0,20,,As VP: Gain 1:buzz: and 5:money:,donald_trump,,12
+Jeb Bush,R,3,2,15,3,0,2:gs: for Florida,As VP: Gain 1:gs: for Florida,jeb_bush,58,11
+George HW Bush,R,4,3,10,2,0,,As VP: Gain 10:strat:,hw_bush,,11

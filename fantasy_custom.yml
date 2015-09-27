@@ -1,13 +1,13 @@
 #This layout inspired by popular fantasy games
 title:
   x: 75
-  y: 90
+  y: 75
   width: 500
   height: 50
 
 upper_right:
   x: 595
-  y: 90
+  y: 75
   width: 135
   height: 50
   align: right
@@ -16,7 +16,7 @@ ur: # alias
 
 art:
   x: 75
-  y: 150
+  y: 130
   width: 675
   height: 520
 
@@ -46,10 +46,30 @@ description:
 desc: # alias
   extends: description
 
+vp_effect:
+  x: 75
+  y: 660
+  width: 675
+  height: 120
+  align: right
+  font_size: 36
+
+special_effect:
+#75 + 84
+  x: 162 
+  y: 740
+  width: 675
+  height: 120
+  align: left
+  valign: bottom
+  font_size: 36
+
+
+
 #84x84 blocks 8 across, 3 down with gaps
 #vertical offset is 106
 descR1C1:
-  y: 730
+  y: 755
   x: 75
   width: 84
   height: 84
@@ -95,12 +115,6 @@ descR1C7:
   extends: descR1C1 
   x: += 504
   y: += 0
-
-descR1C7special:
-  extends: descR1C1 
-  x: += 499
-  width: += 25
-
 
 descR1C8:
   extends: descR1C1 
@@ -186,6 +200,23 @@ descR3C8:
   extends: descR1C1 
   x: += 588
   y: += 212
+
+
+#Some extra wide versions for columns that get 2 digit numbers
+descR1C7special:
+  extends: descR1C7 
+  x: -= 5
+  width: += 25
+  
+descR2C1special:
+  extends: descR2C1 
+  x: -= 5
+  width: += 25
+
+descR3C1special:
+  extends: descR3C1 
+  x: -= 5
+  width: += 25
 
 
 lower_right:
